@@ -14,6 +14,10 @@ Implémentation des endpoints IA décrits dans `CODEX_GPT5_INTEGRATION.md` pour 
 
 Les deux endpoints renvoient un message de sécurité si des signaux de détresse sont détectés dans le payload.
 
+- `GET /api/health`
+  - Entrée : aucune
+  - Sortie : `{ "status": "ok" }` pour vérifier la fonction Vercel
+
 ## Configuration
 
 - `OPENAI_API_KEY` (Vercel Environment Variable) pour activer l’appel GPT-5 mini.
