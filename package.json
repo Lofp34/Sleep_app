@@ -1,0 +1,14 @@
+{
+  "name": "sleep_app",
+  "version": "1.0.0",
+  "description": "API IA minimale pour recommandations et journal de sommeil (Vercel compatible)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node api/ai/recommendation.js",
+    "test": "node -e \"console.log('No automated tests yet')\""
+  },
+  "keywords": ["sleep", "ai", "vercel"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
