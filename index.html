@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrousel Sommeil & Récupération</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      :root {
+        --bg: #0f172a;
+        --panel: #111827;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --accent: #a5b4fc;
+        --card-radius: 18px;
+        --shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", system-ui, -apple-system, sans-serif;
+        background: radial-gradient(circle at 20% 20%, rgba(165, 180, 252, 0.12), transparent 35%),
+          radial-gradient(circle at 80% 0%, rgba(56, 189, 248, 0.12), transparent 35%),
+          var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 48px 20px;
+      }
+
+      .shell {
+        width: 100%;
+        max-width: 420px;
+      }
+
+      header {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 22px;
+        letter-spacing: 0.01em;
+      }
+
+      header p {
+        margin: 8px 0 0;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .swiper {
+        width: 100%;
+        padding: 10px 6px 40px;
+      }
+
+      .swiper-wrapper {
+        align-items: stretch;
+      }
+
+      .swiper-slide {
+        height: auto;
+      }
+
+      .slide-card {
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: var(--card-radius);
+        padding: 24px;
+        box-shadow: var(--shadow);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .pill {
+        align-self: flex-start;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgba(165, 180, 252, 0.14);
+        color: #c7d2fe;
+        font-size: 12px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .card-title {
+        font-size: 18px;
+        margin: 0;
+      }
+
+      .card-body {
+        color: var(--muted);
+        line-height: 1.5;
+        margin: 0;
+        font-size: 15px;
+      }
+
+      .cta {
+        margin-top: auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--accent);
+        font-weight: 600;
+        font-size: 14px;
+        text-decoration: none;
+      }
+
+      .cta svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: var(--accent);
+      }
+
+      .swiper-pagination-bullet {
+        background: rgba(255, 255, 255, 0.35);
+        opacity: 1;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: var(--accent);
+      }
+
+      @media (max-width: 480px) {
+        body {
+          padding: 28px 16px;
+        }
+
+        header h1 {
+          font-size: 20px;
+        }
+
+        .slide-card {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <header>
+        <h1>Construisons ton rituel de sommeil</h1>
+        <p>Fais glisser pour découvrir les étapes clés qui t’aideront à déconnecter.</p>
+      </header>
+
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slide-card">
+              <span class="pill">Routine</span>
+              <h2 class="card-title">Prépare ton espace calme</h2>
+              <p class="card-body">
+                Baisse la luminosité, coupe les notifications et garde uniquement l’essentiel près de toi.
+              </p>
+              <a class="cta" href="#" aria-label="Préparer l’espace">
+                Préparer maintenant
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14"></path>
+                  <path d="m13 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="slide-card">
+              <span class="pill">Respiration</span>
+              <h2 class="card-title">Respire en cadence 4-6</h2>
+              <p class="card-body">
+                Inspire doucement pendant 4 secondes, expire pendant 6. Répète ce cycle pendant 2 minutes.
+              </p>
+              <a class="cta" href="#" aria-label="Lancer la respiration guidée">
+                Lancer la respiration
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14"></path>
+                  <path d="m13 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="slide-card">
+              <span class="pill">Déconnexion</span>
+              <h2 class="card-title">Relâche les pensées</h2>
+              <p class="card-body">
+                Note les idées qui restent, puis pose le téléphone à l’envers pour limiter les sollicitations.
+              </p>
+              <a class="cta" href="#" aria-label="Noter mes idées">
+                Noter mes idées
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14"></path>
+                  <path d="m13 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-pagination" aria-label="Pagination du carrousel"></div>
+        <div class="swiper-button-prev" aria-label="Slide précédente"></div>
+        <div class="swiper-button-next" aria-label="Slide suivante"></div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+        loop: true,
+        spaceBetween: 14,
+        slidesPerView: 1,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        keyboard: {
+          enabled: true,
+        },
+      });
+    </script>
+  </body>
+</html>
